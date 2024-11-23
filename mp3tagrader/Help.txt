@@ -1,0 +1,33 @@
+INTRODUCTION:
+
+The MP3 Tag Reader project in C is a software which will read and display MP3 (ID3) tag information from MP3 files. 
+The software will be desktop based and not web based. The project will be useful to individuals who wish to view and collect MP3 tag data. 
+This project can be extended to implement a tag editor, wherein users can modify mp3 tag information.
+Implemented as a command line application.
+
+ID3v2 Frame header: 
+    ID3v2/file identifier “ID3” 
+    ID3v2 version $03 00 (2, 3 or 4) 
+    ID3v2 flags %abc00000 
+    ID3v2 size 4 * %0xxxxxxx (Total size of ID3 tag) 
+
+ID3v2.2 Frame header:
+    Frame ID $xx xx xx(Three characters) [e.g.: TAL Album / Movie / Show title]
+    TOA Original artist(s) / performer(s) 
+    Size $xx xx xx(Three characters)
+
+ID3v2.3 or ID3v2.4 Frame header:
+    Frame ID $xx xx xx xx (Four characters) [e.g.: TAL Album/Movie/Show title]
+    TIT2 Title / song name /content description 
+    Size $xx xx xx xx (Four Characters)
+    Flags $xx xx
+
+
+Requirement details:
+
+This application, should be able to handle all ID3 versions (Except v2.4) tags.
+Display which version of ID3 tag is used.
+Display all the metadata information from ID3 tag.
+User should be able to change tags according to options given.
+Should display a help screen on request (-h option).
+If ID3 tag not found display proper error messages.
